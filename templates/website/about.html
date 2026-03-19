@@ -1,0 +1,217 @@
+{% extends 'website/index.html' %}
+{% load static %}
+
+
+{% block title %}About Us - FAMT Global{% endblock %}
+
+{% block content %}
+
+<!-- PREMIUM SERVICES -->
+<section class="py-28 bg-gradient-to-br from-gray-50 to-gray-200 text-center overflow-hidden">
+
+<h2 class="text-5xl font-extrabold mb-6">Our Services</h2>
+
+<p class="text-gray-600 max-w-4xl mx-auto mb-20 leading-relaxed text-lg">
+Explore our comprehensive financial, accounting, and compliance services designed to support businesses at every stage — from startups to global enterprises. At FAMT Global, we combine expertise and strategy to deliver accurate, reliable, and growth-focused solutions. 
+
+Our services include business incorporation, bookkeeping, tax filing, ITIN services, CPA certifications, financial analysis, and end-to-end finance solutions.
+<div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-10 px-4">
+
+<!-- CARD -->
+<div class="group relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-500 transform hover:-translate-y-3">
+
+<!-- IMAGE -->
+<div class="absolute inset-0 bg-cover bg-center transition duration-700 group-hover:scale-110"
+style="background-image:url('https://images.unsplash.com/photo-1521791136064-7986c2920216');"></div>
+
+<!-- OVERLAY -->
+<div class="absolute inset-0 bg-black/70 group-hover:bg-black/50 transition"></div>
+
+<!-- CONTENT -->
+<div class="relative z-10 p-8 text-white h-80 flex flex-col justify-end">
+
+<h3 class="text-2xl font-bold mb-2">US Incorporation</h3>
+
+<p class="text-sm mb-4 opacity-90">
+Launch your US business with full compliance and legal setup.
+</p>
+
+<a href="{% url 'incorporation' %}" class="text-blue-300 font-semibold">
+Learn More →
+</a>
+
+</div>
+
+</div>
+
+
+<!-- BOOKKEEPING -->
+<div class="group relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-500 transform hover:-translate-y-3">
+
+<div class="absolute inset-0 bg-cover bg-center transition duration-700 group-hover:scale-110"
+style="background-image:url('https://images.unsplash.com/photo-1554224154-26032ffc0d07');"></div>
+
+<div class="absolute inset-0 bg-black/70 group-hover:bg-black/50"></div>
+
+<div class="relative z-10 p-8 text-white h-80 flex flex-col justify-end">
+
+<h3 class="text-2xl font-bold mb-2">Bookkeeping</h3>
+
+<p class="text-sm mb-4">
+Accurate financial records and insights for better decisions.
+</p>
+
+<a href="{% url 'bookkeeping' %}" class="text-blue-300">Learn More →</a>
+
+</div>
+
+</div>
+
+
+<!-- TAX -->
+<div class="group relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-500 transform hover:-translate-y-3">
+
+<div class="absolute inset-0 bg-cover bg-center transition duration-700 group-hover:scale-110"
+style="background-image:url('https://images.unsplash.com/photo-1554224155-6726b3ff858f');"></div>
+
+<div class="absolute inset-0 bg-black/70 group-hover:bg-black/50"></div>
+
+<div class="relative z-10 p-8 text-white h-80 flex flex-col justify-end">
+
+<h3 class="text-2xl font-bold mb-2">US Tax Filing</h3>
+
+<p class="text-sm mb-4">
+Expert tax filing & compliance to save money and avoid penalties.
+</p>
+
+<a href="{% url 'tax_filing' %}" class="text-blue-300">Learn More →</a>
+
+</div>
+
+</div>
+
+
+<!-- ITIN -->
+<div class="group relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-500 transform hover:-translate-y-3">
+
+<div class="absolute inset-0 bg-cover bg-center transition duration-700 group-hover:scale-110"
+style="background-image:url('https://images.unsplash.com/photo-1507679799987-c73779587ccf');"></div>
+
+<div class="absolute inset-0 bg-black/70 group-hover:bg-black/50"></div>
+
+<div class="relative z-10 p-8 text-white h-80 flex flex-col justify-end">
+
+<h3 class="text-2xl font-bold mb-2">ITIN Services</h3>
+
+<p class="text-sm mb-4">
+Get your ITIN number quickly with expert assistance.
+</p>
+
+<a href="{% url 'itin' %}" class="text-blue-300">Learn More →</a>
+
+</div>
+
+</div>
+
+
+<!-- CPA -->
+<div class="group relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-500 transform hover:-translate-y-3">
+
+<div class="absolute inset-0 bg-cover bg-center transition duration-700 group-hover:scale-110"
+style="background-image:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85');"></div>
+
+<div class="absolute inset-0 bg-black/70 group-hover:bg-black/50"></div>
+
+<div class="relative z-10 p-8 text-white h-80 flex flex-col justify-end">
+
+<h3 class="text-2xl font-bold mb-2">CPA Letter</h3>
+
+<p class="text-sm mb-4">
+Certified CPA letters for compliance and verification.
+</p>
+
+<a href="{% url 'cpa_letter' %}" class="text-blue-300">Learn More →</a>
+
+</div>
+
+</div>
+
+
+<!-- FINANCE -->
+<div class="group relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-500 transform hover:-translate-y-3">
+
+<div class="absolute inset-0 bg-cover bg-center transition duration-700 group-hover:scale-110"
+style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f');"></div>
+
+<div class="absolute inset-0 bg-black/70 group-hover:bg-black/50"></div>
+
+<div class="relative z-10 p-8 text-white h-80 flex flex-col justify-end">
+
+<h3 class="text-2xl font-bold mb-2">Finance Solutions</h3>
+
+<p class="text-sm mb-4">
+End-to-end financial consulting and growth strategies.
+</p>
+
+<a href="{% url 'finance_solutions' %}" class="text-blue-300">Learn More →</a>
+
+</div>
+
+</div>
+
+
+<!-- ANALYSIS -->
+<div class="group relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-500 transform hover:-translate-y-3">
+
+<div class="absolute inset-0 bg-cover bg-center transition duration-700 group-hover:scale-110"
+style="background-image:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71');"></div>
+
+<div class="absolute inset-0 bg-black/70 group-hover:bg-black/50"></div>
+
+<div class="relative z-10 p-8 text-white h-80 flex flex-col justify-end">
+
+<h3 class="text-2xl font-bold mb-2">Financial Analysis</h3>
+
+<p class="text-sm mb-4">
+Forecasting, modeling, and strategic planning.
+</p>
+
+<a href="{% url 'finance_analysis' %}" class="text-blue-300">Learn More →</a>
+
+</div>
+
+</div>
+
+
+<!-- IRS (HIGHLIGHT 🔥) -->
+<div class="group relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-500 transform hover:-translate-y-3 border-2 border-red-500">
+
+<div class="absolute inset-0 bg-cover bg-center transition duration-700 group-hover:scale-110"
+style="background-image:url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f');"></div>
+
+<div class="absolute inset-0 bg-black/70 group-hover:bg-black/50"></div>
+
+<div class="relative z-10 p-8 text-white h-80 flex flex-col justify-end">
+
+<h3 class="text-2xl font-bold mb-2 text-red-400">
+IRS Penalty Help
+</h3>
+
+<p class="text-sm mb-4">
+Resolve IRS notices and reduce penalties fast.
+</p>
+
+<a href="{% url 'contact' %}" class="text-red-300 font-bold">
+Get Help →
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+{% endblock %}

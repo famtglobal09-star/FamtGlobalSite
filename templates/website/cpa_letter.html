@@ -1,0 +1,46 @@
+{% extends 'website/index.html' %}
+{% block content %}
+
+<section class="relative py-32 text-white text-center">
+<div class="absolute inset-0 bg-cover bg-center"
+style="background-image:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85');"></div>
+<div class="absolute inset-0 bg-black/70"></div>
+
+<div class="relative z-10">
+<h1 class="text-5xl font-bold">CPA Letter Services</h1>
+<p>Professional documentation for financial verification and compliance</p>
+</div>
+</section>
+
+<section class="py-24 bg-white">
+
+<div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+
+<div>
+<h2 class="text-4xl font-bold mb-6">Reliable & Certified Documentation</h2>
+<p class="text-gray-600 mb-6">
+Our CPA letters provide official verification for income, business operations, and financial status. Trusted by banks, institutions, and regulatory bodies.
+</p>
+
+<ul class="space-y-3 text-gray-600">
+<li>✔ Income verification</li>
+<li>✔ Business financial proof</li>
+<li>✔ Loan & mortgage support</li>
+<li>✔ Audit documentation</li>
+</ul>
+</div>
+
+<img src="https://images.unsplash.com/photo-1554224154-26032ffc0d07"
+class="rounded-xl shadow-lg">
+
+</div>
+
+</section>
+
+<section class="py-20 bg-gray-100 text-center">
+<h2 class="text-3xl font-bold mb-6">Get Trusted CPA Certification</h2>
+<p class="text-gray-600 mb-6">Fast, accurate, and accepted globally.</p>
+<a href="{% url 'contact' %}" class="bg-blue-600 text-white px-8 py-3 rounded-lg">Request Now</a>
+</section>
+
+{% endblock %}

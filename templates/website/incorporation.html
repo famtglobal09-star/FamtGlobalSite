@@ -1,0 +1,44 @@
+{% extends 'website/index.html' %}
+{% block content %}
+
+<section class="relative py-32 text-white text-center">
+<div class="absolute inset-0 bg-cover bg-center"
+style="background-image:url('https://images.unsplash.com/photo-1521791136064-7986c2920216');"></div>
+<div class="absolute inset-0 bg-black/70"></div>
+
+<div class="relative z-10 max-w-3xl mx-auto">
+<h1 class="text-5xl font-bold mb-6">US Incorporation</h1>
+<p>Launch your US business from anywhere with complete legal compliance.</p>
+</div>
+</section>
+
+<section class="py-24 bg-white">
+<div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+
+<img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f" class="rounded-xl shadow-lg">
+
+<div>
+<h2 class="text-4xl font-bold mb-6">Build Your Global Business</h2>
+<p class="text-gray-600 mb-6">
+We simplify company formation, compliance, and setup so you can focus on scaling your business globally.
+</p>
+
+<ul class="space-y-3 text-gray-600">
+<li>✔ LLC & C-Corp formation</li>
+<li>✔ EIN registration</li>
+<li>✔ Bank account setup</li>
+<li>✔ Ongoing compliance support</li>
+</ul>
+
+</div>
+</div>
+</section>
+
+<section class="py-20 bg-blue-600 text-white text-center">
+<h2 class="text-4xl font-bold">Start Your US Company Today</h2>
+
+<a href="{% url 'contact' %}" class="bg-white text-blue-600 px-8 py-3 rounded-lg mt-6 inline-block">Get Started</a>
+
+</section>
+
+{% endblock %}

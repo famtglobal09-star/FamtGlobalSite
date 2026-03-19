@@ -1,0 +1,260 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FAMT Global | Finance Accounting Management & Taxation</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<style>
+
+.hero-slide{
+opacity:0;
+transition:opacity 1s ease;
+}
+
+.active-slide{
+opacity:1;
+}
+
+.tagline{
+font-size:12px;
+color:black;
+}
+
+.form-input{
+width:100%;
+padding:14px;
+border:1px solid #e2e8f0;
+border-radius:10px;
+outline:none;
+}
+
+.form-input:focus{
+border-color:#2563eb;
+box-shadow:0 0 0 2px rgba(37,99,235,0.2);
+}
+
+/* FLOAT ANIMATION */
+@keyframes float {
+0% { transform: translateY(0px); }
+50% { transform: translateY(-6px); }
+100% { transform: translateY(0px); }
+}
+
+/* PULSE EFFECT */
+@keyframes pulse {
+0% { box-shadow: 0 0 0 0 rgba(34,197,94, 0.7); }
+70% { box-shadow: 0 0 0 12px rgba(34,197,94, 0); }
+100% { box-shadow: 0 0 0 0 rgba(34,197,94, 0); }
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp-btn {
+animation: float 3s ease-in-out infinite, pulse 2s infinite;
+transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+transform: scale(1.1);
+background-color: #16a34a;
+}
+
+</style>
+
+</head>
+
+<!-- TOP BAR -->
+<div class="bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 text-white text-sm">
+  <div class="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center">
+
+    <div class="flex items-center gap-4">
+      <span class="flex items-center gap-1">
+        <i data-lucide="phone"></i> +91 9966341359
+      </span>
+      <span class="hidden md:flex items-center gap-1">
+        <i data-lucide="mail"></i> info@famtglobal.com
+      </span>
+    </div>
+
+    <div class="hidden md:block text-xs text-gray-200">
+      Trusted Financial Consulting Partner 🌍
+    </div>
+
+  </div>
+</div>
+
+
+<!-- NAVBAR -->
+<header class="sticky top-0 z-50 backdrop-blur-lg bg-white/80 border-b border-gray-200 shadow-sm">
+
+<div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+
+<!-- LOGO -->
+<div class="flex items-center space-x-3 group">
+
+<img src="{% static 'image/famt3.png' %}" 
+     class="w-11 transition duration-300 group-hover:scale-110">
+
+<div class="flex flex-col leading-tight">
+
+<h1 class="text-xl font-bold text-gray-800 group-hover:text-blue-600 transition">
+FAMT Global
+</h1>
+
+<div class="text-xs text-gray-500">
+Finance • Accounting • Taxation
+</div>
+
+</div>
+
+</div>
+
+
+<!-- MENU -->
+<nav class="hidden md:flex items-center space-x-8 font-medium">
+
+<a href="{% url 'home' %}" 
+   class="relative hover:text-blue-600 transition">
+   Home
+   <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-600 transition-all group-hover:w-full"></span>
+</a>
+
+<a href="{% url 'about' %}" class="hover:text-blue-600 transition">
+About
+</a>
+
+
+<!-- SERVICES DROPDOWN -->
+<div class="relative group">
+
+<button class="flex items-center gap-1 hover:text-blue-600 transition">
+Services
+<i data-lucide="chevron-down" class="w-4 h-4"></i>
+</button>
+
+<!-- DROPDOWN -->
+<div class="absolute left-0 top-full mt-3 w-72 bg-white shadow-xl rounded-xl p-3 
+opacity-0 invisible group-hover:opacity-100 group-hover:visible 
+transition duration-300 z-50 border">
+
+<a href="{% url 'incorporation' %}" class="block px-4 py-2 rounded-lg hover:bg-blue-50">US Incorporation</a>
+
+<a href="{% url 'bookkeeping' %}" class="block px-4 py-2 rounded-lg hover:bg-blue-50">Bookkeeping</a>
+
+<a href="{% url 'itin' %}" class="block px-4 py-2 rounded-lg hover:bg-blue-50">ITIN Services</a>
+
+<a href="{% url 'cpa_letter' %}" class="block px-4 py-2 rounded-lg hover:bg-blue-50">CPA Letter</a>
+
+<a href="{% url 'tax_filing' %}" class="block px-4 py-2 rounded-lg hover:bg-blue-50">US Tax Filing</a>
+
+<a href="{% url 'finance_solutions' %}" class="block px-4 py-2 rounded-lg hover:bg-blue-50">Finance Solutions</a>
+
+<a href="{% url 'finance_analysis' %}" class="block px-4 py-2 rounded-lg hover:bg-blue-50">Finance Analysis</a>
+
+</div>
+
+</div>
+
+<a href="{% url 'who_we_help' %}" class="hover:text-blue-600 transition">
+Who We Help
+</a>
+
+<a href="{% url 'contact' %}" class="hover:text-blue-600 transition">
+Contact
+</a>
+
+</nav>
+
+
+<!-- CTA BUTTON -->
+<div class="hidden md:block">
+<a href="{% url 'contact' %}" 
+   class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-5 py-2 rounded-full font-semibold shadow hover:scale-105 transition">
+
+Get Consultation
+</a>
+</div>
+
+</div>
+
+</header>
+<!-- CONTENT -->
+{% block content %}
+{% endblock %}
+
+<!-- FOOTER -->
+<footer class="bg-gray-900 text-white py-6">
+
+<div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-6 text-sm">
+
+<div>
+<h3 class="text-lg font-semibold mb-2">FAMT Global</h3>
+<p class="text-gray-400 leading-relaxed">
+Finance • Accounting • Management • Taxation consulting services.
+</p>
+</div>
+
+<div>
+<h3 class="font-semibold mb-2">Quick Links</h3>
+<ul class="space-y-1 text-gray-400">
+<li><a href="{% url 'home' %}" class="hover:text-white">Home</a></li>
+<li><a href="{% url 'about' %}" class="hover:text-white">About</a></li>
+<li><a href="#" class="hover:text-white">Services</a></li>
+<li><a href="{% url 'contact' %}" class="hover:text-white">Contact</a></li>
+</ul>
+</div>
+
+<div>
+<h3 class="font-semibold mb-2">Legal</h3>
+<ul class="space-y-1 text-gray-400">
+<li><a href="{% url 'privacy_policy' %}" class="hover:text-white">Privacy Policy</a></li>
+<li><a href="{% url 'terms' %}" class="hover:text-white">Terms & Conditions</a></li>
+<li><a href="{% url 'disclaimer' %}" class="hover:text-white">Disclaimer</a></li>
+</ul>
+</div>
+
+</div>
+
+<div class="text-center mt-6 text-gray-500 text-sm">
+© 2026 FAMT Global. All Rights Reserved.
+</div>
+
+</footer>
+
+<!-- WHATSAPP BUTTON -->
+<a href="https://wa.me/919966341359"
+target="_blank"
+rel="noopener noreferrer"
+class="whatsapp-btn fixed bottom-5 right-5 flex items-center gap-2 bg-green-500 text-white px-4 py-2 text-sm rounded-full shadow-lg z-50">
+
+<i data-lucide="message-circle"></i>
+<span>Chat with us</span>
+
+</a>
+
+<script>
+
+let slides=document.querySelectorAll(".hero-slide");
+let index=0;
+
+if(slides.length > 0){
+setInterval(function(){
+slides[index].classList.remove("active-slide");
+index++;
+if(index>=slides.length){ index=0; }
+slides[index].classList.add("active-slide");
+},5000);
+}
+
+lucide.createIcons();
+
+</script>
+
+</body>
+</html>

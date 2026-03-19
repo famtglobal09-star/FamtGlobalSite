@@ -1,0 +1,45 @@
+{% extends 'website/index.html' %}
+{% block content %}
+
+<section class="relative py-32 text-white text-center">
+<div class="absolute inset-0 bg-cover bg-center"
+style="background-image:url('https://images.unsplash.com/photo-1554224154-26032ffc0d07');"></div>
+<div class="absolute inset-0 bg-black/70"></div>
+
+<div class="relative z-10">
+<h1 class="text-5xl font-bold">Bookkeeping Services</h1>
+<p>Accurate financial records for smarter business decisions</p>
+</div>
+</section>
+
+<section class="py-24 bg-white">
+
+<div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+
+<div>
+<h2 class="text-4xl font-bold mb-6">Stay Financially Organized</h2>
+<p class="text-gray-600 mb-6">
+We manage your financial records, ensuring accuracy, compliance, and real-time insights.
+</p>
+
+<ul class="space-y-3 text-gray-600">
+<li>✔ Daily transaction tracking</li>
+<li>✔ Monthly reporting</li>
+<li>✔ Tax-ready data</li>
+<li>✔ Financial insights</li>
+</ul>
+
+</div>
+
+<img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85" class="rounded-xl shadow-lg">
+
+</div>
+
+</section>
+
+<section class="py-20 bg-gray-100 text-center">
+<h2 class="text-3xl font-bold">Let Experts Handle Your Books</h2>
+<a href="{% url 'contact' %}" class="bg-blue-600 text-white px-8 py-3 rounded-lg mt-6 inline-block">Get Started</a>
+</section>
+
+{% endblock %}

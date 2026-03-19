@@ -1,0 +1,375 @@
+{% extends 'base.html' %}
+
+{% block title %}Site Map - FAMT Global{% endblock %}
+
+{% block meta_description %}Complete site map of FAMT Global consulting services website. Find all our pages including services, blog posts, and contact information.{% endblock %}
+
+{% block meta_keywords %}sitemap, site map, navigation, FAMT Global pages{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="text-center mb-5">Site Map</h1>
+            <p class="text-center text-muted mb-5">Navigate through all pages and content on our website</p>
+        </div>
+    </div>
+
+    <!-- Main Pages -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-home me-2"></i>1. Main Pages
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        {% for page in sitemap_structure.main_pages %}
+                        <div class="col-md-6 col-lg-4 mb-3">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        {% if page.url != '#' %}
+                                        <a href="{{ page.url }}" class="text-decoration-none">
+                                            {{ page.name }}
+                                        </a>
+                                        {% else %}
+                                        {{ page.name }}
+                                        {% endif %}
+                                    </h5>
+                                    <p class="card-text text-muted small">{{ page.description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Services Overview Pages -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header bg-success text-white">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-cogs me-2"></i>2. Main Services Overview Pages
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        {% for page in sitemap_structure.services_overview %}
+                        <div class="col-md-6 mb-3">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        {% if page.url != '#' %}
+                                        <a href="{{ page.url }}" class="text-decoration-none">
+                                            {{ page.name }}
+                                        </a>
+                                        {% else %}
+                                        {{ page.name }}
+                                        {% endif %}
+                                    </h5>
+                                    <p class="card-text text-muted small">{{ page.description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Finance Service Pages -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header bg-info text-white">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-chart-line me-2"></i>3. Finance Service Pages
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        {% for page in sitemap_structure.finance_services %}
+                        <div class="col-md-6 col-lg-4 mb-3">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ page.name }}</h5>
+                                    <p class="card-text text-muted small">{{ page.description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Accounting Service Pages -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header bg-warning text-white">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-calculator me-2"></i>4. Accounting Service Pages
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        {% for page in sitemap_structure.accounting_services %}
+                        <div class="col-md-6 col-lg-4 mb-3">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ page.name }}</h5>
+                                    <p class="card-text text-muted small">{{ page.description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Management Consulting Pages -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header bg-secondary text-white">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-users-cog me-2"></i>5. Management Consulting Pages
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        {% for page in sitemap_structure.management_consulting %}
+                        <div class="col-md-6 col-lg-4 mb-3">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ page.name }}</h5>
+                                    <p class="card-text text-muted small">{{ page.description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Taxation Service Pages -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header bg-danger text-white">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-file-invoice-dollar me-2"></i>6. Taxation Service Pages
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        {% for page in sitemap_structure.taxation_services %}
+                        <div class="col-md-6 col-lg-4 mb-3">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ page.name }}</h5>
+                                    <p class="card-text text-muted small">{{ page.description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Industry Pages -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header bg-dark text-white">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-industry me-2"></i>7. Industry Pages
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        {% for page in sitemap_structure.industry_pages %}
+                        <div class="col-md-6 mb-3">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ page.name }}</h5>
+                                    <p class="card-text text-muted small">{{ page.description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resource Pages -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-book me-2"></i>8. Resource Pages
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        {% for page in sitemap_structure.resource_pages %}
+                        <div class="col-md-6 col-lg-3 mb-3">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        {% if page.url != '#' %}
+                                        <a href="{{ page.url }}" class="text-decoration-none">
+                                            {{ page.name }}
+                                        </a>
+                                        {% else %}
+                                        {{ page.name }}
+                                        {% endif %}
+                                    </h5>
+                                    <p class="card-text text-muted small">{{ page.description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Trust & Legal Pages -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header bg-success text-white">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-shield-alt me-2"></i>9. Trust & Legal Pages
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        {% for page in sitemap_structure.trust_legal %}
+                        <div class="col-md-6 col-lg-3 mb-3">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        {% if page.url != '#' %}
+                                        <a href="{{ page.url }}" class="text-decoration-none">
+                                            {{ page.name }}
+                                        </a>
+                                        {% else %}
+                                        {{ page.name }}
+                                        {% endif %}
+                                    </h5>
+                                    <p class="card-text text-muted small">{{ page.description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services from Database -->
+    {% if services %}
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header bg-info text-white">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-list me-2"></i>Available Services
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        {% for service in services %}
+                        <div class="col-md-6 col-lg-4 mb-3">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <a href="{% url 'website:services' %}#service-{{ service.id }}" class="text-decoration-none">
+                                            {{ service.title }}
+                                        </a>
+                                    </h5>
+                                    <p class="card-text text-muted small">{{ service.description|truncatechars:100 }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- Blog Posts -->
+    {% if blogs %}
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header bg-warning text-white">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-blog me-2"></i>Blog Posts
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        {% for blog in blogs %}
+                        <div class="col-md-6 col-lg-4 mb-3">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <a href="{% url 'website:blog_detail' blog.pk %}" class="text-decoration-none">
+                                            {{ blog.title }}
+                                        </a>
+                                    </h5>
+                                    <p class="card-text text-muted small">{{ blog.content|truncatechars:150 }}</p>
+                                    <small class="text-muted">
+                                        <i class="fas fa-calendar me-1"></i>{{ blog.created_at|date:"M d, Y" }}
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- XML Sitemap Link -->
+    <div class="row mt-4">
+        <div class="col-12 text-center">
+            <div class="alert alert-light">
+                <h5><i class="fas fa-sitemap me-2"></i>XML Sitemap</h5>
+                <p class="mb-2">For search engines and automated tools, visit our XML sitemap:</p>
+                <a href="{% url 'website:sitemap_xml' %}" class="btn btn-outline-primary" target="_blank">
+                    <i class="fas fa-external-link-alt me-2"></i>View XML Sitemap
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
